@@ -2,7 +2,7 @@
 
 API RESTful construída com Node.js, Express e TypeScript seguindo princípios SOLID e Clean Code.
 
-## 🏗️ Arquitetura Detalhada
+## Arquitetura Detalhada
 
 O projeto segue uma arquitetura em camadas com princípios SOLID:
 
@@ -42,7 +42,7 @@ src/
 └── server.ts           # Inicialização do servidor
 ```
 
-### 🔄 Fluxo de Dados
+### Fluxo de Dados
 1. **Request** → Middleware (auth, validation, security)
 2. **Controller** → Service (lógica de negócio)
 3. **Service** → Repository (acesso aos dados)
@@ -55,7 +55,7 @@ src/
 - **DIP (Dependency Inversion Principle)**: Services dependem de abstrações (Repositories)
 - **OCP (Open/Closed Principle)**: Extensível através de middlewares e validators
 
-## 🚀 Instalação
+## Instalação
 
 1. Instale as dependências:
 ```bash
@@ -88,16 +88,16 @@ npm run build
 npm start
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
-### 🔓 Rotas Públicas
+### Rotas Públicas
 - `GET /api/v1/health` - Health check da API
 - `POST /api/v1/leads` - Criar lead (formulário público)
 - `POST /api/v1/auth/login` - Login de usuário
 
 ### Rotas Protegidas (Requerem Autenticação)
 
-#### 📊 Leads
+#### Leads
 - `GET /api/v1/leads/admin` - Listar leads com paginação e busca
 - `POST /api/v1/leads/admin` - Criar lead (painel admin)
 - `GET /api/v1/leads/admin/stats` - Estatísticas de leads
@@ -106,12 +106,12 @@ npm start
 - `DELETE /api/v1/leads/admin/:id` - Desativar lead (soft delete)
 - `DELETE /api/v1/leads/admin/:id/permanent` - Deletar permanentemente (apenas admin)
 
-#### 👤 Autenticação
+#### Autenticação
 - `GET /api/v1/auth/me` - Dados do usuário autenticado
 - `POST /api/v1/auth/register` - Criar usuário (apenas admin) - Não coloquei no front
 - `GET /api/v1/auth/users` - Listar usuários (apenas admin) - Não coloquei no front
 
-### 📋 Parâmetros de Query (Leads)
+### Parâmetros de Query (Leads)
 - `page` - Número da página (padrão: 1)
 - `limit` - Itens por página (padrão: 10, máximo: 100)
 - `search` - Termo de busca (nome ou email)
@@ -122,15 +122,15 @@ Todas as rotas protegidas requerem o header:
 Authorization: Bearer <jwt_token>
 ```
 
-## 📚 Documentação da API - Swagger
+## Documentação da API - Swagger
 
 A API possui documentação completa através do Swagger/OpenAPI 3.0!
 
-### 🌐 Acesso à Documentação
+### Acesso à Documentação
 - **Desenvolvimento Local**: `http://localhost:5000/docs`
 - **Produção**: `Adicionarei após o deploy`
 
-### ✨ Recursos da Documentação
+### Recursos da Documentação
 - **Todos os endpoints** documentados com exemplos
 - **Schemas detalhados** para request/response
 - **Códigos de erro** e suas descrições
@@ -144,13 +144,13 @@ A API possui documentação completa através do Swagger/OpenAPI 3.0!
 4. **Cole o token** no formato: `Bearer SEU_TOKEN_AQUI`
 5. **Teste os endpoints protegidos**!
 
-### 🔑 Credenciais Padrão
+### Credenciais Padrão
 Para testar a API, você pode usar as seguintes credenciais:
 - **Email**: `leads@leads.com.br`
 - **Senha**: `leads123`
 - Ou criar um usuário através do swagger
 
-### 📡 Endpoints Documentados
+### Endpoints Documentados
 
 #### Autenticação
 - `POST /auth/login` - Login (público)
@@ -222,7 +222,6 @@ Authorization: Bearer SEU_TOKEN_AQUI
 - **Joi**: Validação de dados de entrada
 - **CORS**: Configurado para aceitar apenas o frontend
 
-
 ## Tecnologias
 
 - Node.js
@@ -234,9 +233,3 @@ Authorization: Bearer SEU_TOKEN_AQUI
 - Bcrypt
 - Helmet
 - Express Rate Limit
-
-
-
-
-
-
